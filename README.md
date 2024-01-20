@@ -1,4 +1,23 @@
-# create-svelte
+# Sveltekit MS EntraID OIDC認証パーツ
+## 設定
+1. sveltekitをインストール
+2. MS EntraIDでアプリ登録、テナントIDとかredirecturlをコピー
+3. .env.developmentに設定
+    ```
+    VITE_OIDC_ROOT_URL="https://login.microsoftonline.com/{テナントID}/v2.0/.well-known/openid-configuration"
+    VITE_CLIENT_ID="{クライアントID}"
+    VITE_REDIRECT_URL="{リダイレクトurl}"
+    VITE_PUBLIC_KEY="{publickey.pem}"
+    VITE_PRIVATE_KEY="{privatekey.pem}"
+    ```
+## 概要
+- /login    ログイン、FORM ACTION か /login/msへのリダイレクトで認証処理
+- /callback 認証後にcallbackされる処理
+
+
+
+ーーー
+
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
