@@ -27,5 +27,8 @@
 		"fast-jwt": "^3.3.2",
 		"jwt-decode": "^4.0.0",
 		"openid-client": "^5.6.4"
-	}
+	},
+	"engines": {
+		"node": ">=16.0.0"
+   }
 }
