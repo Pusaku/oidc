@@ -1,6 +1,7 @@
 import { Issuer, generators } from "openid-client";
 import { error, redirect } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
+import "dotenv/config";
 
 export const GET = (async ({ locals }) => {
     // 発行者（Issuer）サイトからOpenID情報を取得、サイトは公開されている（MSサイトより）
