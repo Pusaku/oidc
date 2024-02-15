@@ -1,12 +1,8 @@
 import { error } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
+import { COOKIE_NAME } from '$lib/server/constants';
 
-export const load = (async ({ locals }) => {
-    if (locals.session.session_id === undefined) {
-        throw error(400, 'session state is invalid');
-    }
-    return {
-        user_id: locals.session.user_id,
-        email: locals.session.email,
-    }
+export const load = (async ({ cookies }) => {
+    const email = cookies.get(COOKIE_NAME);
+    return { email };
 }) satisfies PageServerLoad;
