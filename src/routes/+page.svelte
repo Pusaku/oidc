@@ -5,8 +5,7 @@
 
 <h1>Welcome to SvelteKit</h1>
 <p><a href="/login/ms">Login</a></p>
-{data.app_name}
-<!-- <p>
+<p>
 {data?.OIDC_ROOT_URL}
 </p>
 <p>
@@ -14,4 +13,4 @@
 </p>
 <p>
 {data?.REDIRECT_URL}
-</p> -->
+</p>
