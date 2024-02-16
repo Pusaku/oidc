@@ -1,11 +1,16 @@
+<script lang="ts">
+    import type { PageData } from './$types';
+    export let data: PageData;
+</script>
+
 <h1>Welcome to SvelteKit</h1>
 <p><a href="/login/ms">Login</a></p>
 <p>
-{process.env.OIDC_ROOT_URL}
+{data.OIDC_ROOT_URL}
 </p>
 <p>
-{process.env.CLIENT_ID}
+{data.CLIENT_ID}
 </p>
 <p>
-{process.env.REDIRECT_URL}
+{data.REDIRECT_URL}
 </p>
