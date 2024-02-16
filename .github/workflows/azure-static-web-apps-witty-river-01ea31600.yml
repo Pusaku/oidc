@@ -32,10 +32,10 @@ jobs:
           api_location: "build/server" # Api source code path - optional
           output_location: "build/static" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-        env: # Add environment variables here
+        env:
           OIDC_ROOT_URL: "https://login.microsoftonline.com/446f1ba7-ebdd-4a47-be5b-09582e1e546f/v2.0/.well-known/openid-configuration"
-          # CLIENT_ID: "76ee303b-59a2-4152-a448-f63933727c07"
-          # REDIRECT_URL: "https://witty-river-01ea31600.4.azurestaticapps.net/callback"        
+          CLIENT_ID: "76ee303b-59a2-4152-a448-f63933727c07"
+          REDIRECT_URL: "https://witty-river-01ea31600.4.azurestaticapps.net/callback"        
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
